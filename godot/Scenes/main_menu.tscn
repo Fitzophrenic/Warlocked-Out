@@ -1,0 +1,83 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6doauyv5ah63"]
+
+[ext_resource type="Script" uid="uid://d4ickdvr5y251" path="res://Scripts/main_menu.gd" id="1_28flt"]
+
+[sub_resource type="Theme" id="Theme_erv1k"]
+Button/font_sizes/font_size = 16
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_28flt")
+
+[node name="Title" type="Label" parent="."]
+offset_right = 1920.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 200
+text = "Warlocked Out"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -4096
+offset_left = -29.0
+offset_top = -46.0
+offset_right = 1957.0
+offset_bottom = 1158.0
+mouse_filter = 2
+color = Color(0.32751876, 0.0012625658, 0.5799142, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_top = 341.0
+offset_right = 1920.0
+offset_bottom = 1058.0
+theme = SubResource("Theme_erv1k")
+
+[node name="MainButtons" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="PlayButton" type="Button" parent="CenterContainer/MainButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Play"
+
+[node name="CreditsButton" type="Button" parent="CenterContainer/MainButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Credits"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/MainButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Quit"
+
+[node name="CredtisMenu" type="VBoxContainer" parent="CenterContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CenterContainer/CredtisMenu"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "
+Team GR8
+Project Lead: Ethan Fitgerald
+Designer/Artist: Ethan Fitgerald
+GamePlay Programer: Ely Walker
+System Programmer: Caleb Wycoff
+Sound/Vidual Designer: Ben LeBoeuf
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="BackButton" type="Button" parent="CenterContainer/CredtisMenu"]
+custom_minimum_size = Vector2(333, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "Back"
+
+[connection signal="pressed" from="CenterContainer/MainButtons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CenterContainer/CredtisMenu/BackButton" to="." method="_on_back_button_pressed"]
