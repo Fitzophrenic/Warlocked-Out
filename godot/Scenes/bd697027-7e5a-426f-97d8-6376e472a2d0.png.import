@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kmrvg1f4fiso"
-path="res://.godot/imported/blocks_51.png-c0a07f4d750845093fbb07428651c546.ctex"
+uid="uid://dupprt8uvffb0"
+path="res://.godot/imported/bd697027-7e5a-426f-97d8-6376e472a2d0.png-7a8f653f3d12377662057f202d847ab9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Isometric_Tiles_Pixel_Art/Blocks/blocks_51.png"
-dest_files=["res://.godot/imported/blocks_51.png-c0a07f4d750845093fbb07428651c546.ctex"]
+source_file="res://Scenes/bd697027-7e5a-426f-97d8-6376e472a2d0.png"
+dest_files=["res://.godot/imported/bd697027-7e5a-426f-97d8-6376e472a2d0.png-7a8f653f3d12377662057f202d847ab9.ctex"]
 
 [params]
 

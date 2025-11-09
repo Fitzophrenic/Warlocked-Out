@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="Warlocked-Out"
-run/main_scene="uid://c3lxdj45wl2sp"
+run/main_scene="uid://b6doauyv5ah63"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
 window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="Warlocked-Out"
 
 [input]
 
