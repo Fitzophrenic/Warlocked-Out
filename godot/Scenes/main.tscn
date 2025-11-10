@@ -1,10 +1,9 @@
-[gd_scene load_steps=25 format=4 uid="uid://c3lxdj45wl2sp"]
+[gd_scene load_steps=24 format=4 uid="uid://c3lxdj45wl2sp"]
 
 [ext_resource type="Texture2D" uid="uid://c0akfumcmxg7s" path="res://Assets/Isometric prototype/Merged_Isometric.png" id="1_jjgbg"]
-[ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="2_8gbba"]
+[ext_resource type="Script" uid="uid://bubim6lv8wb6l" path="res://Scripts/character_body_2d.gd" id="2_8gbba"]
 [ext_resource type="Texture2D" uid="uid://dq1v5ceybsdbr" path="res://Assets/Small-8-Direction-Characters_by_AxulArt/Small-8-Direction-Characters_by_AxulArt.png" id="2_bo1nx"]
-[ext_resource type="Texture2D" uid="uid://dqbf26qt3japr" path="res://settingsgear.png" id="4_hqydh"]
-[ext_resource type="PackedScene" uid="uid://dnmkp5il6kouc" path="res://Scenes/options_menu.tscn" id="5_oy445"]
+[ext_resource type="PackedScene" uid="uid://dnmkp5il6kouc" path="res://Scenes/pause_menu.tscn" id="5_oy445"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
 texture = ExtResource("1_jjgbg")
@@ -449,18 +448,6 @@ middle_mouse_paste_enabled = false
 wrap_mode = 1
 indent_wrapped_lines = true
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="CharacterBody2D"]
-position = Vector2(158.667, -107)
-scale = Vector2(0.0625, 0.0546875)
-texture_normal = ExtResource("4_hqydh")
-
-[node name="OptionsMenu" parent="CharacterBody2D" instance=ExtResource("5_oy445")]
-visible = false
-offset_left = -188.333
-offset_top = -89.3333
-offset_right = -188.333
-offset_bottom = -89.3333
-
 [node name="Background" type="ColorRect" parent="."]
 z_index = -4096
 offset_left = -991.0
@@ -483,4 +470,7 @@ position = Vector2(640, -256)
 color = Color(0.999999, 0.992918, 0.646026, 1)
 texture = SubResource("GradientTexture2D_jjvhh")
 
-[connection signal="pressed" from="CharacterBody2D/TouchScreenButton" to="CharacterBody2D" method="_on_settings_pressed"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_oy445")]
+visible = false

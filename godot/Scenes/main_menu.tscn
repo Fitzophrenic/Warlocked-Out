@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6doauyv5ah63"]
+[gd_scene load_steps=5 format=3 uid="uid://b6doauyv5ah63"]
 
 [ext_resource type="Script" uid="uid://bunnm00w1y1l2" path="res://Scripts/main_menu.gd" id="1_1ehe0"]
 [ext_resource type="Texture2D" uid="uid://dupprt8uvffb0" path="res://Assets/bd697027-7e5a-426f-97d8-6376e472a2d0.png" id="1_06t4h"]
-[ext_resource type="PackedScene" uid="uid://dnmkp5il6kouc" path="res://Scenes/options_menu.tscn" id="3_nkdjs"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("1_06t4h")
@@ -67,7 +66,7 @@ theme_override_font_sizes/font_size = 41
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rhts7")
-text = "OPTIONS"
+text = "CREDITS"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -78,13 +77,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rhts7")
 text = "EXIT"
-
-[node name="OptionsMenu" parent="." instance=ExtResource("3_nkdjs")]
-visible = false
-layout_mode = 1
-offset_right = -407.0
-offset_bottom = -354.0
-script = null
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_startgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
