@@ -8,38 +8,48 @@ var input: Vector2
 @onready var tutorial_textbox = $TextEdit
 @onready var optionsmenu = $OptionsMenu
 
+#func to_isometric(vec: Vector2) -> Vector2:
+	## Convert normal x/y movement to isometric direction
+	#return Vector2(
+		#vec.x - vec.y,
+		#(vec.x + vec.y) * 0.5
+	#)
+
 func get_input():
 	input.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	input.y = Input.get_action_strength("down") - Input.get_action_strength("up")
+
 	return input.normalized()
-	
+	#return to_isometric(normalized)
+
 func _physics_process(delta: float) -> void:
 	var playerInput = get_input()
-	if(tutorialactive):
-		if(Input.get_action_strength("right")):
+
+	if tutorialactive:
+		if Input.is_action_pressed("right"):
 			tutorialmoved = true
 			animated_sprite.play("Right")
-		elif(Input.get_action_strength("left")):
+		elif Input.is_action_pressed("left"):
+			tutorialmoved = true
 			animated_sprite.play("Left")
+		elif Input.is_action_pressed("down"):
 			tutorialmoved = true
-		elif(Input.get_action_strength("down")):
 			animated_sprite.play("Back")
+		elif Input.is_action_pressed("up"):
 			tutorialmoved = true
-		elif(Input.get_action_strength("up")):
 			animated_sprite.play("Forward")
-			tutorialmoved = true
-		elif(Input.get_action_strength("item_pickup")):
+		elif Input.is_action_pressed("item_pickup"):
 			tutorialitempickup = true
-		elif(Input.get_action_strength("startspell")):
+		elif Input.is_action_pressed("startspell"):
 			tutorialspellcast = true
 		else:
 			animated_sprite.play("Idle")
-	
-		if playerInput == Vector2.ZERO:
-			velocity = Vector2.ZERO
-		else:
-			velocity = lerp(velocity, playerInput * SPEED, delta * ACCEL)
-	
+
+	if playerInput == Vector2.ZERO:
+		velocity = Vector2.ZERO
+	else:
+		velocity = lerp(velocity, playerInput * SPEED, delta * ACCEL)
+
 	move_and_slide()
 	
 func _on_settings_pressed():
@@ -62,7 +72,7 @@ func _process(delta: float) -> void:
 		
 func _tutorial_start() -> void:
 	#print("tutorial start")
-	await get_tree().create_timer(3.0).timeout
+	#await get_tree().create_timer(3.0).timeout
 	tutorial_textbox.text = "To start, lets try moving around. Press one of the WASD keys to move around."
 	tutorialactive = true
 	
