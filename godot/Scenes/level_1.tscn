@@ -465,7 +465,7 @@ y_sort_origin = 3
 z_index = 3
 y_sort_enabled = true
 use_parent_material = true
-tile_map_data = PackedByteArray("AADc//7/ZQADAAEAAADc////ZQADAAEAAADc/wAAZQADAAEAAADc/wEAZQADAAEAAADc/wIAZQADAAEAAADc/wMAZQADAAEAAADx//7/ZQAKAAMAAADx////ZQAKAAMAAADx/wAAZQAKAAMAAADx/wEAZQAKAAMAAADx/wIAZQAKAAMAAAA=")
+tile_map_data = PackedByteArray("AADc//7/ZQADAAEAAADc////ZQADAAEAAADc/wAAZQADAAEAAADc/wEAZQADAAEAAADc/wIAZQADAAEAAADx//7/ZQAKAAMAAADx////ZQAKAAMAAADx/wAAZQAKAAMAAADx/wEAZQAKAAMAAADx/wIAZQAKAAMAAAA=")
 tile_set = SubResource("TileSet_wrinw")
 y_sort_origin = 3
 
@@ -482,7 +482,7 @@ y_sort_origin = 3
 z_index = 3
 y_sort_enabled = true
 use_parent_material = true
-tile_map_data = PackedByteArray("AADc//7/ZQADAAEAAADc////ZQADAAEAAADc/wAAZQADAAEAAADc/wEAZQADAAEAAADc/wMAZQADAAEAAADc/wIAZQADAAEAAAD0/wwAZQADAAEAAAD1/wwAZQADAAEAAAD2/wwAZQADAAEAAAD3/wwAZQADAAEAAAD4/wwAZQADAAEAAAA=")
+tile_map_data = PackedByteArray("AAD0/wwAZQADAAEAAAD1/wwAZQADAAEAAAD2/wwAZQADAAEAAAD3/wwAZQADAAEAAAD4/wwAZQADAAEAAAA=")
 tile_set = SubResource("TileSet_wrinw")
 y_sort_origin = 3
 

@@ -250,7 +250,7 @@ var predefined_point_cloud: Dictionary = {
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
+		if event.is_released() and event.button_index == MOUSE_BUTTON_LEFT:
 			var result: RecognizerResult
 			print(draw_surface.get_points())
 			if draw_surface.get_points().size() != 0:
