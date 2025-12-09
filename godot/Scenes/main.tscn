@@ -308,7 +308,7 @@ tile_set = SubResource("TileSet_8gbba")
 y_sort_origin = 2
 
 [node name="Coin" parent="TileMap" instance=ExtResource("9_ynf5e")]
-position = Vector2(787, 234)
+position = Vector2(777, 242)
 scale = Vector2(2, 2)
 
 [node name="Coin2" parent="TileMap" instance=ExtResource("9_ynf5e")]

@@ -13,6 +13,7 @@ vframes = 4
 frame = 8
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 4
 script = ExtResource("2_g537i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
