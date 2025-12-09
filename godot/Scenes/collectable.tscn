@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtwdmkr6g3pvb"]
+
+[ext_resource type="Texture2D" uid="uid://ccrdsuqnmgfcu" path="res://Assets/gold.png" id="1_licok"]
+[ext_resource type="Script" uid="uid://d0r1lwo6o7g6s" path="res://collectable.gd" id="2_me652"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2p6v"]
+size = Vector2(24, 25)
+
+[node name="Collectable" type="Sprite2D"]
+texture = ExtResource("1_licok")
+hframes = 4
+vframes = 4
+frame = 8
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_me652")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_h2p6v")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://kev2mig6cssb"]
+
+[ext_resource type="Script" uid="uid://b1eecvhm0t262" path="res://Scenes/gui/collectables.gd" id="1_6ehq2"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("Coins", "Collectables")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6ehq2")
+Coins = NodePath("Coins")
+Collectables = NodePath("Collectables")
+
+[node name="Coins" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 25
+text = "Coins: 0"
+
+[node name="Collectables" type="Label" parent="Control"]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 200.0
+offset_bottom = 73.875
+theme_override_font_sizes/font_size = 25
+text = "Collectables:0"
