@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://c3lxdj45wl2sp"]
+[gd_scene load_steps=14 format=4 uid="uid://c3lxdj45wl2sp"]
 
 [ext_resource type="Texture2D" uid="uid://c0akfumcmxg7s" path="res://Assets/Isometric prototype/Merged_Isometric.png" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://dig4whxw8e2q4" path="res://Scenes/player.tscn" id="3_21xkr"]
+[ext_resource type="Script" uid="uid://ctqqn6jdkfq2d" path="res://Scripts/tutorial.gd" id="4_6bp64"]
 [ext_resource type="Script" uid="uid://ca0bby8qilwga" path="res://Scripts/Door1.gd" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://dnmkp5il6kouc" path="res://Scenes/pause_menu.tscn" id="5_oy445"]
 [ext_resource type="Script" uid="uid://cfji7xl41dxk1" path="res://Scripts/item_pickup.gd" id="7_6bp64"]
@@ -317,7 +318,40 @@ z_index = 2
 position = Vector2(448, -213)
 scale = Vector2(2, 2)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_21xkr")]
+[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("3_21xkr")]
+
+[node name="Tutorial2" type="Label" parent="CharacterBody2D"]
+z_index = 4096
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = -43.0
+offset_right = 20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 12
+script = ExtResource("4_6bp64")
+
+[node name="TextEdit2" type="TextEdit" parent="CharacterBody2D"]
+visible = false
+z_index = 4010
+offset_left = -147.33333
+offset_top = -41.666668
+offset_right = 149.33333
+offset_bottom = -14.666668
+theme_override_font_sizes/font_size = 9
+text = "Welcome to Warlocked-Out!!! A Metroidvania style puzzle game."
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+indent_wrapped_lines = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(1382, -699)

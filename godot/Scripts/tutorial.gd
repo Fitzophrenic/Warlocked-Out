@@ -11,6 +11,7 @@ var tutorialspellcast = false
 var tutorialcompleted = false
 
 func _ready() -> void:
+	UI.visible = false
 	tutorial_textbox.text = "Move with W, A, S, or D. To continue Press Enter"
 
 func _unhandled_input(event):

@@ -286,6 +286,26 @@ position = Vector2(575, 320)
 color = Color(0.999999, 0.992918, 0.646026, 1)
 texture = SubResource("GradientTexture2D_uy8f0")
 
+[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistol/PointLight2D"]
+position = Vector2(-2559, -1277)
+color = Color(0.999999, 0.992918, 0.646026, 1)
+texture = SubResource("GradientTexture2D_uy8f0")
+
+[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistol/PointLight2D/PointLight2D"]
+position = Vector2(4832, 2412)
+color = Color(0.999999, 0.992918, 0.646026, 1)
+texture = SubResource("GradientTexture2D_uy8f0")
+
+[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistol/PointLight2D/PointLight2D/PointLight2D"]
+position = Vector2(129, -1696)
+color = Color(0.999999, 0.992918, 0.646026, 1)
+texture = SubResource("GradientTexture2D_uy8f0")
+
+[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistol/PointLight2D/PointLight2D/PointLight2D/PointLight2D"]
+position = Vector2(-3490, -846)
+color = Color(0.999999, 0.992918, 0.646026, 1)
+texture = SubResource("GradientTexture2D_uy8f0")
+
 [node name="Doors" type="Node" parent="TileMap"]
 
 [node name="Door1Bot" type="TileMapLayer" parent="TileMap/Doors"]
@@ -409,7 +429,7 @@ tile_map_data = PackedByteArray("AAAJANv/ZQADAAEAAAAJANz/ZQADAAEAAAAJAN3/ZQADAAE
 tile_set = SubResource("TileSet_wrinw")
 y_sort_origin = 3
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("2_7p6j4")]
+[node name="CharacterBody2D2" parent="." groups=["player"] instance=ExtResource("2_7p6j4")]
 position = Vector2(-130, 675)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
