@@ -7,6 +7,7 @@
 size = Vector2(24, 25)
 
 [node name="Collectable" type="Sprite2D"]
+z_index = 1
 texture = ExtResource("1_licok")
 hframes = 4
 vframes = 4

@@ -7,6 +7,8 @@
 size = Vector2(24, 25)
 
 [node name="Coin" type="Sprite2D"]
+z_index = 1
+y_sort_enabled = true
 texture = ExtResource("1_jgi06")
 hframes = 4
 vframes = 4
