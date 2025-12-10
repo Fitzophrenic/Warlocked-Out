@@ -307,12 +307,14 @@ tile_map_data = PackedByteArray("AAACAOT/ZQAKAAMAAAADAOT/ZQAKAAMAAAAEAOT/ZQAKAAM
 tile_set = SubResource("TileSet_8gbba")
 y_sort_origin = 2
 
-[node name="Coin" parent="TileMap" instance=ExtResource("9_ynf5e")]
-position = Vector2(777, 242)
+[node name="Coin" parent="." instance=ExtResource("9_ynf5e")]
+z_index = 2
+position = Vector2(199, -85)
 scale = Vector2(2, 2)
 
-[node name="Coin2" parent="TileMap" instance=ExtResource("9_ynf5e")]
-position = Vector2(1026, 114)
+[node name="Coin2" parent="." instance=ExtResource("9_ynf5e")]
+z_index = 2
+position = Vector2(448, -213)
 scale = Vector2(2, 2)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_21xkr")]
