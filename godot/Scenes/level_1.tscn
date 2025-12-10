@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://bfdhs6rbeq3bo"]
+[gd_scene load_steps=11 format=4 uid="uid://bfdhs6rbeq3bo"]
 
 [ext_resource type="Texture2D" uid="uid://c0akfumcmxg7s" path="res://Assets/Isometric prototype/Merged_Isometric.png" id="1_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://dig4whxw8e2q4" path="res://Scenes/player.tscn" id="2_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://dnmkp5il6kouc" path="res://Scenes/pause_menu.tscn" id="4_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://dtwdmkr6g3pvb" path="res://Scenes/collectable.tscn" id="5_6444e"]
 [ext_resource type="Script" uid="uid://b3mdoad1ppevc" path="res://Scenes/open_door.gd" id="6_evi0p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrdnt"]
@@ -273,7 +274,7 @@ tile_map_data = PackedByteArray("AAD4//3/ZQAOAAMAAAD5//3/ZQAOAAMAAAD6//3/ZQAOAAM
 tile_set = SubResource("TileSet_wrinw")
 y_sort_origin = 2
 
-[node name="Pedistol" type="TileMapLayer" parent="TileMap"]
+[node name="Pedistal" type="TileMapLayer" parent="TileMap"]
 y_sort_enabled = true
 use_parent_material = true
 position = Vector2(708, -349)
@@ -281,27 +282,27 @@ tile_map_data = PackedByteArray("AAASAAEAZQAKAAIAAADC/wEAZQAKAAIAAADV/+b/ZQAKAAI
 tile_set = SubResource("TileSet_wrinw")
 y_sort_origin = 3
 
-[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistol"]
+[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistal"]
 position = Vector2(575, 320)
 color = Color(0.999999, 0.992918, 0.646026, 1)
 texture = SubResource("GradientTexture2D_uy8f0")
 
-[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistol/PointLight2D"]
+[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistal/PointLight2D"]
 position = Vector2(-2559, -1277)
 color = Color(0.999999, 0.992918, 0.646026, 1)
 texture = SubResource("GradientTexture2D_uy8f0")
 
-[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistol/PointLight2D/PointLight2D"]
+[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistal/PointLight2D/PointLight2D"]
 position = Vector2(4832, 2412)
 color = Color(0.999999, 0.992918, 0.646026, 1)
 texture = SubResource("GradientTexture2D_uy8f0")
 
-[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistol/PointLight2D/PointLight2D/PointLight2D"]
+[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistal/PointLight2D/PointLight2D/PointLight2D"]
 position = Vector2(129, -1696)
 color = Color(0.999999, 0.992918, 0.646026, 1)
 texture = SubResource("GradientTexture2D_uy8f0")
 
-[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistol/PointLight2D/PointLight2D/PointLight2D/PointLight2D"]
+[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistal/PointLight2D/PointLight2D/PointLight2D/PointLight2D"]
 position = Vector2(-3490, -846)
 color = Color(0.999999, 0.992918, 0.646026, 1)
 texture = SubResource("GradientTexture2D_uy8f0")
@@ -429,7 +430,7 @@ tile_map_data = PackedByteArray("AAAJANv/ZQADAAEAAAAJANz/ZQADAAEAAAAJAN3/ZQADAAE
 tile_set = SubResource("TileSet_wrinw")
 y_sort_origin = 3
 
-[node name="CharacterBody2D2" parent="." groups=["player"] instance=ExtResource("2_7p6j4")]
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_7p6j4")]
 position = Vector2(-130, 675)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -528,6 +529,28 @@ z_index = 4096
 position = Vector2(1438, -358)
 scale = Vector2(12.92, 12.92)
 shape = SubResource("CircleShape2D_6444e")
+
+[node name="Collectables" type="Node" parent="."]
+
+[node name="Collectable" parent="Collectables" instance=ExtResource("5_6444e")]
+z_index = 496
+position = Vector2(1286, -43)
+
+[node name="Collectable2" parent="Collectables" instance=ExtResource("5_6444e")]
+z_index = 496
+position = Vector2(-1275, -1321)
+
+[node name="Collectable3" parent="Collectables" instance=ExtResource("5_6444e")]
+z_index = 496
+position = Vector2(3558, 1093)
+
+[node name="Collectable4" parent="Collectables" instance=ExtResource("5_6444e")]
+z_index = 496
+position = Vector2(3685, -602)
+
+[node name="Collectable5" parent="Collectables" instance=ExtResource("5_6444e")]
+z_index = 496
+position = Vector2(198, -1451)
 
 [connection signal="body_exited" from="DoorAreas/door2Area" to="DoorAreas/door2Area" method="_on_body_exited"]
 [connection signal="body_exited" from="DoorAreas/door2Area2" to="DoorAreas/door2Area2" method="_on_body_exited"]

@@ -269,7 +269,7 @@ tile_map_data = PackedByteArray("AAD8/wMAZQAKAAMAAAD8/wIAZQAKAAMAAAD8/wEAZQAKAAM
 tile_set = SubResource("TileSet_8gbba")
 y_sort_origin = 1
 
-[node name="Pedistol" type="TileMapLayer" parent="TileMap"]
+[node name="Pedistal" type="TileMapLayer" parent="TileMap"]
 y_sort_enabled = true
 use_parent_material = true
 position = Vector2(578, 327)
@@ -277,7 +277,7 @@ tile_map_data = PackedByteArray("AAD4/+3/ZQAKAAIAAAA=")
 tile_set = SubResource("TileSet_8gbba")
 y_sort_origin = 3
 
-[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistol"]
+[node name="PointLight2D" type="PointLight2D" parent="TileMap/Pedistal"]
 position = Vector2(384, -414)
 color = Color(0.999999, 0.992918, 0.646026, 1)
 texture = SubResource("GradientTexture2D_jjvhh")
@@ -318,7 +318,7 @@ z_index = 2
 position = Vector2(448, -213)
 scale = Vector2(2, 2)
 
-[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("3_21xkr")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_21xkr")]
 
 [node name="Tutorial2" type="Label" parent="CharacterBody2D"]
 z_index = 4096
